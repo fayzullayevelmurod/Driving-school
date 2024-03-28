@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font link -->
+    <link rel="stylesheet" href="font/stylesheet.css">
     <!-- Style css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
@@ -10,15 +14,218 @@
 <body>
 
     <div class="wrapper">
+        <!-- Header start -->
         <header class="header">
-            <div class="container">
-                
+            <div class="container-lg">
+                <div class="header-content">
+                    <a href="#!" class="logo"><img src="images/logo.svg" alt=""></a>
+                    <div class="header-navs">
+                        <div class="header-select">
+                            <span class="header__select-spn">Москва</span>
+                            <button class="header__select-btn">25 филиалов <img src="images/icons/select-arrow.svg" alt=""></button>
+
+                            <div class="header__select-tabs">
+                                <span class="header__select-tab active">Москва</span>
+                                <span class="header__select-tab">Орехово-Зуево</span>
+                                <span class="header__select-tab">Куровское</span>
+                                <span class="header__select-tab">Электросталь</span>
+                                <span class="header__select-tab">Ногинск</span>
+                                <span class="header__select-tab">Люберцы</span>
+                                <span class="header__select-tab">Павловский Посад</span>
+                                <span class="header__select-tab">Жуковский</span>
+                                <span class="header__select-tab">Раменское</span>
+                                <span class="header__select-tab">Ногинск</span>
+
+                                <span class="header__select-tab">Москва</span>
+                                <span class="header__select-tab">Орехово-Зуево</span>
+                                <span class="header__select-tab">Куровское</span>
+                                <span class="header__select-tab">Электросталь</span>
+                                <span class="header__select-tab">Ногинск</span>
+                                <span class="header__select-tab">Люберцы</span>
+                                <span class="header__select-tab">Павловский Посад</span>
+                                <span class="header__select-tab">Жуковский</span>
+                                <span class="header__select-tab">Раменское</span>
+                                <span class="header__select-tab">Ногинск</span>
+                            </div>
+                        </div>
+
+                        <div class="header-info">
+                            <div class="header-time">
+                                <div class="header__time-img">
+                                    <img src="images/icons/time-icon.svg" alt="">
+                                </div>
+                                <div class="header__time-texts">
+                                    <span class="header__time-text">пн–пт: <b>10:00 - 21:00</b></span>
+                                    <span class="header__time-text">сб–вс: <b>10:00 - 21:00</b></span>
+                                </div>
+                            </div>
+                            <div class="header-phone">
+                                <div class="header__phone-img">
+                                    <img src="images/icons/head-phone.svg" alt="">
+                                </div>
+                                <div class="header__phone-links">
+                                    <a href="tel:8 (800) 555-09-18" class="header__phone-link">8 (800) 555-09-18</a>
+                                    <a href="#!" class="header__phone-link">Заказать звонок</a>
+                                </div>
+                            </div>
+
+                            <button class="header-bars"><img src="images/icons/bars.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
+
+        <main>
+            <!-- Home start -->
+            <section class="home">
+                <div class="container">
+                    <div class="home-content">
+                        <div class="home-info">
+                            <div class="home-title-wrap">
+                                <h1 class="home-title">
+                                    Занятия по вождению 
+                                    <span>в любом районе</span>
+                                </h1>
+                                <h1 class="home-title2">
+                                    Москвы
+                                    <span><img src="images/icons/time-icon.svg" alt=""> в любое удобное время</span>
+                                </h1>
+                            </div>
+                            <div class="home__link-wrap">
+                                <a href="#!" class="home-link main-btn">Записаться на занятие</a>
+                                <div class="home__link-arrow">
+                                    <img src="images/icons/arrow-left.svg" alt="">
+                                    <img src="images/icons/arrow-left.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-location">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e01bf94b7ddcb2f04c31babfa11cb2a0df6d89030ac694018316ae41ec33e94&amp;source=constructor" frameborder="0"></iframe>
+                        </div>
+                        <div class="home-car">
+                            <img src="images/home-car.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Cars start -->
+            <section class="cars">
+                <div class="container">
+                    <div class="cars-content">
+                        <div class="cars-top">
+                            <div class="cars-title">
+                                <div class="cars-title-img">
+                                    <img src="images/icons/car-rul.svg" alt="" class="car-rul-img">
+                                    <img src="images/icons/check.svg" alt="" class="car-title-check">
+                                </div>
+                                <h1><span>Иномарки</span> не старше 5 лет</h1>
+
+                                <img src="images/icons/line-arrow.svg" alt="" class="title-line-arrow">
+                            </div>
+
+                            <div class="cars-text">
+                                <p><a href="#!">Машины всегда чистые,</a> в них приятно пахнет, чистка салона каждые два дня, в них строго запрещено курить</p>
+                                <img src="images/icons/stars-icon.svg" alt="" class="cars-text-stars">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cars-slider">
+                    <div class="swiper carsSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/cars-slider-img1.png" alt="" class="cars-slider-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/cars-slider-img2.png" alt="" class="cars-slider-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/cars-slider-img3.png" alt="" class="cars-slider-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/cars-slider-img1.png" alt="" class="cars-slider-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/cars-slider-img2.png" alt="" class="cars-slider-img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/cars-slider-img3.png" alt="" class="cars-slider-img">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"><img src="images/icons/slider-arrow.svg" alt=""></div>
+                        <div class="swiper-button-prev"><img src="images/icons/slider-arrow.svg" alt="" style="transform: rotate(-180deg);"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Cars end -->
+
+            <!-- Football start -->
+            <section class="football">
+                <div class="container-lg">
+                    <div class="football-content">
+                        <div class="football-top">
+                            <div class="football-title">
+                                <img src="images/icons/football-icon.svg" alt="">
+                                <h1>Мы взяли шефство над футбольной командой молодёжной лиги</h1>
+                            </div>
+                            <div class="football-slider-arrow">
+                                <div class="swiper-button-next"><img src="images/icons/slider-arrow.svg" alt=""></div>
+                                <div class="swiper-button-prev"><img src="images/icons/slider-arrow.svg" alt="" style="transform: rotate(-180deg);"></div>
+                            </div>
+                        </div>
+                        <div class="football-slider">
+                            <div class="swiper footballSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/football-slider-img1.png" alt="" class="cars-slider-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/football-slider-img2.png" alt="" class="cars-slider-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/football-slider-img1.png" alt="" class="cars-slider-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/football-slider-img2.png" alt="" class="cars-slider-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Football end -->
+            
+            <!-- Help start -->
+            <section class="help">
+                <div class="container-lg">
+                    <div class="help-content">
+                        <div class="help-title">
+                            <img src="images/icons/like.svg" alt="">
+                            <h1>Помогаем </h1>
+                        </div>
+                        <div class="help-company">
+                            <a href="#!" class="help-company-logo"><img src="images/help-logo1.svg" alt=""></a>
+                            <a href="#!" class="help-company-logo"><img src="images/help-logo2.svg" alt=""></a>
+                            <a href="#!" class="help-company-logo"><img src="images/help-logo3.svg" alt=""></a>
+                            <a href="#!" class="help-company-logo"><img src="images/help-logo4.svg" alt=""></a>
+                            <a href="#!" class="help-company-logo"><img src="images/help-logo5.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Help end -->
+
+
+        </main>
     </div>
     
 
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Main js -->
     <script src="js/main.js"></script>
 
