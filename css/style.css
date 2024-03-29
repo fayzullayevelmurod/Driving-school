@@ -1352,6 +1352,366 @@ input {
 /* Install end */
 
 
+/* certificate start */
+.certificate{
+    background-color: #FFF;
+    padding: 0px 0px 170px;
+}
+.certificate .certificate-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.certificate-content .certificate-title{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 433px;
+}
+.certificate-content .certificate-title h1{
+    color: rgb(47, 53, 63);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+}
+.certificate-content .certificate-title a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(47, 53, 63);
+    font-size: 14px;
+    line-height: 15px;
+}
+.certificate-content .certificate-img{
+    margin-left: -85px;
+    top: -25px;
+}
+/* Certificate end */
+
+/* Medical start */
+.medical{
+    padding-bottom: 198px;
+}
+.medical .medical-content{
+    border-radius: 30px;
+    background: rgb(65, 136, 255);
+    position: relative;
+    padding: 0px 28px 0px 42px;
+    margin-top: -122px;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+.medical-content .medical-phone{
+    position: relative;
+    max-width: max-content;
+}
+.medical-content .medical-phone-img{
+    margin-top: -24px;
+}
+.medical-content .medical-phone-line{
+    position: absolute;
+    top: 57px;
+    right: -38px;
+}
+
+.medical-content .medical-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0px;
+}
+.medical-content .medical-info .medical-title{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    max-width: 510px;
+}
+.medical-content .medical-info .medical-text{
+    color: rgb(228, 238, 255);
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 386px;
+}
+
+.medical-content .medical-modal{
+    position: absolute;
+    bottom: -138px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    padding: 15px 14px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.medical-content .medical-modal::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 28px;
+    height: 10px;
+    transform: translate(-50%);
+    background-image: url(../images/icons/offer-phone-before.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.medical-modal .medical-modal-text{
+    color: rgb(47, 53, 63);
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+.medical-modal .medical-modal-link{
+    color: rgb(107, 126, 158);
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 10px;
+    background: rgb(236, 243, 255);
+}
+/* Medical end */
+
+/* Exam start */
+.exam .exam-content{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+}
+.exam-content .exam-info{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 453px;
+}
+.exam-info .exam-title{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    color: rgb(47, 53, 63);
+}
+.exam-info .exam-title span{
+    color: rgb(65, 136, 255);
+}
+.exam-info .exam-text{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(47, 53, 63);
+    font-size: 14px;
+    line-height: 18px;
+}
+.exam-info .exam-police{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.5px);
+    background: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+    height: 64px;
+}
+.exam-info .exam-police p{
+    color: rgb(55, 58, 63);
+    font-size: 13px;
+    line-height: 17px;
+}
+.exam-info .exam-police img{
+    margin-top: 20px;
+    margin-right: -20px;
+}
+.exam-content .exam-video,
+.exam-content .exam-video video{
+    max-width: 470px;
+    height: 235px;
+    border-radius: 10px;
+}
+
+.exam .exam-director{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 26px;
+}
+.exam-director .exam-director-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.exam-director .exam-director-title{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    color: rgb(47, 53, 63);
+    max-width: 358px;
+}
+.exam-director .exam-director-title span{
+    color: rgb(65, 136, 255);
+}
+.exam-director .exam-director-message{
+    position: relative;
+    margin-left: -10px;
+    padding: 9px 20px 10px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    max-width: 328px;
+}
+.exam-director .exam-director-message p{
+    position: relative;
+    z-index: 2;
+    color: rgb(47, 53, 63);
+    font-size: 14px;
+    line-height: 16px;
+}
+.exam-director-message span{
+    position: absolute;
+    right: 19px;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: rgb(47, 53, 63, 0.3);
+    font-size: 10px;
+    line-height: 10px;
+}
+.exam-director-message .message-icon{
+    position: absolute;
+    left: -13px;
+    bottom: 5px;
+    z-index: 0;
+}
+/* Exam end */
+
+/* Sign-up start */
+.sign-up{
+    padding-bottom: 66px;
+    background-color: #4188FF;
+}
+.sign-up .sign-content{
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+.sign-content .sign-items{
+    display: flex;
+    gap: 30px;
+    margin-top: -27px;
+}
+.sign-items .sign-item{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    width: 100%;
+}
+.sign-item .sign__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sign-item .sign__item-title{
+    color: rgb(47, 53, 63);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19px;
+}
+.sign-item .sign__item-text{
+    color: rgb(47, 53, 63);
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 320px;
+}
+.sign-item:nth-child(1) .sign__item-text{
+    max-width: 240px;
+}
+
+.sign-content .sign-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+.sign-info .sign-title{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 41px;
+    text-align: center;
+    max-width: 676px;
+}
+.sign-info .sign-form-wrap{
+    position: relative;
+    width: 744px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 15px;
+    padding: 20px 27px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(36px);
+    background: rgb(255, 255, 255);
+}
+.sign-form-wrap .sign-form-text{
+    color: rgb(103, 113, 130);
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    max-width: 334px;
+}
+.sign-form-wrap .sign-form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.sign-form .sign-form-inp{
+    border-radius: 5px;
+    background: rgb(241, 245, 252);
+    padding: 12px 10px;
+    border: none;
+    outline: none;
+    color: #6c7b94;
+    font-size: 14px;
+    line-height: 17px;
+    height: 40px;
+    width: 100%;
+}
+.sign-form .sign-form-inp::placeholder{
+    color: rgb(169, 175, 186);
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+.sign-form .sign-form-btn{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+}
+/* Sign-up end */
+
+
+
+
+
+
+
 
 
 
@@ -1403,8 +1763,8 @@ input {
     background-color: #FFF;
 }
 
-.football-content .football-slider img{
-    width: 100%;
+.football .football-slider img{
+    width: 105%;
 }
 /* Football end */
 
@@ -1414,6 +1774,7 @@ input {
     padding: 60px 0px 70px;
     margin-bottom: 100px;
     border-bottom: 1px solid #E7ECF4;
+    border-top: 1px solid #E7ECF4;
     display: flex;
     flex-direction: column;
     gap: 25px;
