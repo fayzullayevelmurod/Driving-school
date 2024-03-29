@@ -17,9 +17,55 @@ selectTabs.forEach(tab => {
     });
 });
 
+// Install active
+let timeTabs = document.querySelectorAll('.install__time-tab');
+let installTabs = document.querySelectorAll('.install-tab');
+let installItems = document.querySelectorAll('.install__block-items');
+
+// Time tabs
+timeTabs.forEach(function(tab, index) {
+    tab.addEventListener('click', function(e){
+        timeTabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        tab.classList.add('active');
+    })
+});
+
+// Install  tabs
+installTabs.forEach(function(tab, index) {
+    tab.addEventListener('click', function(e){
+        installTabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        tab.classList.add('active');
+
+        installItems.forEach(function(item, i) {
+            if (i === index) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    })
+});
+
+
+
 
 // Cars slider
 var carsSlider = new Swiper(".carsSlider", {
+    slidesPerView: 2.5,
+    spaceBetween: 20,
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+// theory slider
+var theorySlider = new Swiper(".theorySlider", {
     slidesPerView: 2.5,
     spaceBetween: 20,
     grabCursor: true,
