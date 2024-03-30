@@ -1,3 +1,16 @@
+// Header menu
+const menu = document.querySelector('.header-modal');
+const openMenu = document.querySelector('.header-bars');
+const closeMenu = document.querySelector('.header__modal-close');
+
+openMenu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+closeMenu.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+
 
 // Header select active
 const selectBtn = document.querySelector('.header__select-btn');
@@ -17,15 +30,32 @@ selectTabs.forEach(tab => {
     });
 });
 
+// Header modal
+const headerItems = document.querySelectorAll('.header__modal-item');
+
+headerItems.forEach(item => {
+    const optionTexts = item.querySelectorAll('.header__modal-option span');
+
+    optionTexts.forEach(optionText => {
+        optionText.addEventListener('click', function() {
+            const selectSpan = document.querySelector('.header__modal-select span');
+            selectSpan.textContent = this.textContent;
+        });
+    });
+});
+
+
+
+
 // Install active
 let timeTabs = document.querySelectorAll('.install__time-tab');
 let installTabs = document.querySelectorAll('.install-tab');
 let installItems = document.querySelectorAll('.install__block-items');
 
 // Time tabs
-timeTabs.forEach(function(tab, index) {
-    tab.addEventListener('click', function(e){
-        timeTabs.forEach(function(tab) {
+timeTabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function (e) {
+        timeTabs.forEach(function (tab) {
             tab.classList.remove('active');
         });
         tab.classList.add('active');
@@ -33,14 +63,14 @@ timeTabs.forEach(function(tab, index) {
 });
 
 // Install  tabs
-installTabs.forEach(function(tab, index) {
-    tab.addEventListener('click', function(e){
-        installTabs.forEach(function(tab) {
+installTabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function (e) {
+        installTabs.forEach(function (tab) {
             tab.classList.remove('active');
         });
         tab.classList.add('active');
 
-        installItems.forEach(function(item, i) {
+        installItems.forEach(function (item, i) {
             if (i === index) {
                 item.classList.add('active');
             } else {
@@ -49,6 +79,24 @@ installTabs.forEach(function(tab, index) {
         });
     })
 });
+
+
+// Video
+document.querySelectorAll('.play-video').forEach(function(playButton) {
+    playButton.addEventListener('click', function() {
+        var video = this.parentElement.querySelector('.my-video');
+        if (video.paused) {
+            video.play();
+            video.setAttribute('controls', 'controls'); // controls qo'shamiz
+        } else {
+            video.pause();
+            video.removeAttribute('controls'); // controlsni olib tashlaymiz
+        }
+        this.style.display = 'none';
+    });
+});
+
+
 
 
 
@@ -82,5 +130,15 @@ var footballSlider = new Swiper(".footballSlider", {
     navigation: {
         nextEl: ".football-slider-arrow .swiper-button-next",
         prevEl: ".football-slider-arrow .swiper-button-prev",
+    },
+});
+
+// video slider
+var videoSlider = new Swiper(".videoSlider", {
+    slidesPerView: 3.2,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".video__sec-arrow .swiper-button-next",
+        prevEl: ".video__sec-arrow .swiper-button-prev",
     },
 });
