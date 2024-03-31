@@ -38,6 +38,7 @@ button {
 }
 input {
     outline: none;
+    border: none;
     transition: .3s ease all;
 }
 
@@ -50,6 +51,9 @@ input {
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.175);
     border-radius: 5px;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .main-btn{
@@ -73,6 +77,7 @@ input {
     padding-top: 20px;
 }
 .header-content {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -103,6 +108,7 @@ input {
     white-space: nowrap;
 }
 .header-select .header__select-btn{
+    position: relative;
     color: rgb(65, 136, 255);
     font-size: 13px;
     line-height: 12px;
@@ -2013,7 +2019,8 @@ input {
     line-height: 34px;
 }
 .help-content .help-company{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
     align-items: center;
     gap: 20px;
 }
@@ -2301,3 +2308,291 @@ input {
     font-weight: 600;
 }
 /* Footer end */
+
+
+/* Modal start */
+.sign-modal-wrap .sign-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 11;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    padding: 50px 23px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 370px;
+    transition: .3s ease all;
+}
+.sign-modal-wrap .sign-modal.active,
+.register-modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.sign-modal-wrap .sign-modal.active+.sign-modal-bg,
+.register-modal.active+.register-modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.5);
+}
+.sign-modal .sign-modal-info{
+    display: flex;
+    flex-direction: column;
+}
+.register-modal .register-modal-close,
+.sign-modal .sign-modal-info .sign-modal-close{
+    margin-left: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.register-modal .register-modal-title,
+.sign-modal .sign-modal-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    text-align: center;
+}
+.register-modal-title h2,
+.sign-modal-title h2{
+    color: rgb(47, 53, 63);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.register-modal-title p,
+.sign-modal-title p{
+    color: rgb(103, 113, 130);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.sign-modal .sign-modal-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sign-modal-form .sign-modal-inp{
+    border-radius: 5px;
+    background: rgb(241, 245, 252);
+    width: 250px;
+    height: 45px;
+    color: rgb(169, 175, 186);
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 15px;
+}
+.sign-modal-form .sign-modal-inp::placeholder{
+    color: rgb(169, 175, 186);
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+.sign-modal-form .sign-modal-btn,
+.register-modal .register-modal-btn{
+    width: 250px;
+    height: 50px;
+}
+
+/* Register modal */
+.register-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 11;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background: rgb(65, 136, 255);
+    padding: 50px 23px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 370px;
+    transition: .3s ease all;  
+}
+.register-modal-title h2,
+.register-modal-title p{
+    color: rgb(255, 255, 255);
+}
+.register-modal .register-modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.register-modal-body .register-modal-text{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    line-height: 20px;
+}
+.register-modal .register-modal-btn{
+    margin-top: 13px;
+}
+
+
+/* Media start */
+@media only screen and (max-width: 1100px) {
+    .header-content .header-info,
+    .header-content .header-navs{
+        gap: 15px;
+    }
+    .header-phone .header__phone-link{
+        font-size: 16px;
+        line-height: 15px;
+    }
+    
+    .help-content .help-company{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .header-content{
+        gap: 20px;
+    }
+    .header-content .header-navs{
+        padding-left: 20px;
+    }
+    .header-info .header-time{
+        display: none;
+    }
+    /* .home-content .home-title,
+    .home-content .home-title2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .home-content .home-title2 span {
+        font-size: 16px;
+        line-height: 16.42px;
+    } */
+
+    .home .home-content {
+        padding: 43px 0px 32px;
+        border-bottom: 1px solid rgb(221, 229, 243);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    .home-content .home-car{
+        left: 60%;
+    }
+    .home-content .home-info{
+        gap: 20px;
+    }
+    .theory-content .theory-big-title {
+        position: absolute;
+        top: -43px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 212.23px;
+        line-height: 150px;
+    }
+    .theory-content .theory-info{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .theory-content .theory__branch-box {
+        top: 270px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
+
+
+@media only screen and (max-width: 776px){
+    .header-phone .header__phone-links{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .header{
+        padding-top: 10px;
+    }
+    .header-content{
+        height: 100px;
+        padding: 15px;
+        align-items: start;
+    }
+    .header-content .logo img{
+        width: 145px;
+    }
+    .header-content .header-navs{
+        border: none;
+        padding-left: 0;
+    }
+    .header-phone .header__phone-img,
+    .header-info .header-bars{
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
+    .header-info .header-bars img,
+    .header-phone .header__phone-img img{
+        width: 100%;
+    }
+    .header-content .header-info{
+        margin-left: auto;
+    }
+    .header-navs .header-select{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 6px 15px;
+        padding-left: 15px;
+        width: 100%;
+        border-top: 1px solid rgb(237, 244, 255);
+    }
+    .header-select .header__select-btn{
+        background-color: transparent;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header-select .header__select-btn span{
+        padding: 4px 10px 4px 7px;
+        border-radius: 5px;
+        background: rgb(237, 244, 255);
+    }
+
+    .home .home-content{
+        gap: 16px;
+    }
+    .home-content .home-car,
+    .home-info .home__link-wrap{
+        display: none;
+    }
+    .home-content .home-title,
+    .home-content .home-title2{
+        font-size: 22px;
+        line-height: 23px;
+    }
+    .home-content .home-title2 span{
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .home-content .home-title2 span img{
+        width: 11px;
+        height: 11px;
+    }
+}

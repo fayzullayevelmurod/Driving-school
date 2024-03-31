@@ -22,7 +22,7 @@
                     <div class="header-navs">
                         <div class="header-select">
                             <span class="header__select-spn">Москва</span>
-                            <button class="header__select-btn">25 филиалов <img src="images/icons/select-arrow.svg" alt=""></button>
+                            <button class="header__select-btn"><span>25 филиалов</span> <img src="images/icons/select-arrow.svg" alt=""></button>
 
                             <div class="header__select-tabs">
                                 <span class="header__select-tab active">Москва</span>
@@ -60,9 +60,9 @@
                                 </div>
                             </div>
                             <div class="header-phone">
-                                <div class="header__phone-img">
+                                <a href="tel:8 (800) 555-09-18" class="header__phone-img">
                                     <img src="images/icons/head-phone.svg" alt="">
-                                </div>
+                                </a>
                                 <div class="header__phone-links">
                                     <a href="tel:8 (800) 555-09-18" class="header__phone-link">8 (800) 555-09-18</a>
                                     <a href="#!" class="header__phone-link">Заказать звонок</a>
@@ -853,7 +853,7 @@
                                     <p class="sign-form-text">Познакомьтесь с инструктором, потестируйте машины </p>
                                     <div class="sign-form">
                                         <input type="text" name="name" placeholder="Имя" class="sign-form-inp">
-                                        <input type="tel" name="phone" placeholder="Телефон" class="sign-form-inp">
+                                        <input type="number" name="phone" placeholder="Телефон" class="sign-form-inp">
                                         <button class="sign-form-btn main-btn">Записаться</button>
                                     </div>
                                 </div>
@@ -1116,14 +1116,50 @@
     <div class="sign-modal-wrap">
         <div class="sign-modal">
             <div class="sign-modal-info">
-                <button class="sign-modal-close"><img src="images/icons/" alt=""></button>
+                <button class="sign-modal-close"><img src="images/icons/close.svg" alt=""></button>
                 <div class="sign-modal-title">
                     <h2>Заявка на обучение</h2>
-                    <p>Мы перезвоним вам в ближайшее рабочее время</p>
+                    <p>Менеджер перезвонит в течение часа и запишет вас на удобное время</p>
                 </div>
             </div>
+            <div class="sign-modal-form">
+                <input type="text" name="name" placeholder="Имя" class="sign-modal-inp">
+                <input type="number" name="name" placeholder="Телефон" class="sign-modal-inp">
+                <button class="sign-modal-btn main-btn">Записаться</button>
+            </div>
         </div>
+        <div class="sign-modal-bg"></div>
     </div>
+
+    <!-- Register modal -->
+    <div class="register-modal-wrap">
+        <div class="register-modal">
+            <button class="register-modal-close"><img src="images/icons/close.svg" alt=""></button>
+            <div class="register-modal-title">
+                <h2>Договор онлайн</h2>
+                <p>Зарегистрируйтесь сейчас и получите доступ к онлайн сервисам и бонусам</p>
+            </div>
+            <div class="register-modal-body">
+                <div class="register-modal-text">
+                    <img src="images/icons/register-modal-icon1.svg" alt="">
+                    300 бонусов в подарок
+                </div>
+                <div class="register-modal-text">
+                    <img src="images/icons/register-modal-icon2.svg" alt="">
+                    Доступ к теории и практике
+                </div>
+                <div class="register-modal-text">
+                    <img src="images/icons/register-modal-icon3.svg" alt="">
+                    Онлайн оплата
+                </div>
+            </div>
+
+            <button class="register-modal-btn main-btn">Зарегистрироваться</button>
+        </div>
+        <div class="register-modal-bg"></div>
+    </div>
+
+
 
 
     <!-- Swiper JS -->

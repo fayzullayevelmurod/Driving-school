@@ -30,6 +30,7 @@ selectTabs.forEach(tab => {
     });
 });
 
+
 // Header modal
 const headerItems = document.querySelectorAll('.header__modal-item');
 
@@ -46,13 +47,11 @@ headerItems.forEach(item => {
 
 
 
-
-// Install active
+// Time tabs
 let timeTabs = document.querySelectorAll('.install__time-tab');
 let installTabs = document.querySelectorAll('.install-tab');
 let installItems = document.querySelectorAll('.install__block-items');
 
-// Time tabs
 timeTabs.forEach(function (tab, index) {
     tab.addEventListener('click', function (e) {
         timeTabs.forEach(function (tab) {
@@ -87,18 +86,14 @@ document.querySelectorAll('.play-video').forEach(function(playButton) {
         var video = this.parentElement.querySelector('.my-video');
         if (video.paused) {
             video.play();
-            video.setAttribute('controls', 'controls'); // controls qo'shamiz
+            video.setAttribute('controls', 'controls');
         } else {
             video.pause();
-            video.removeAttribute('controls'); // controlsni olib tashlaymiz
+            video.removeAttribute('controls');
         }
         this.style.display = 'none';
     });
 });
-
-
-
-
 
 
 // Cars slider
@@ -110,6 +105,24 @@ var carsSlider = new Swiper(".carsSlider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        776: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        991: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        }
+    }
 });
 
 // theory slider
@@ -121,6 +134,24 @@ var theorySlider = new Swiper(".theorySlider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+     breakpoints: {
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        776: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        991: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        }
+    }
 });
 
 // football slider
@@ -131,6 +162,24 @@ var footballSlider = new Swiper(".footballSlider", {
         nextEl: ".football-slider-arrow .swiper-button-next",
         prevEl: ".football-slider-arrow .swiper-button-prev",
     },
+     breakpoints: {
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        776: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        991: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        }
+    }
 });
 
 // video slider
@@ -141,4 +190,57 @@ var videoSlider = new Swiper(".videoSlider", {
         nextEl: ".video__sec-arrow .swiper-button-next",
         prevEl: ".video__sec-arrow .swiper-button-prev",
     },
+     breakpoints: {
+        320: {
+            slidesPerView: 1.3,
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        776: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        },
+        991: {
+            slidesPerView: 3.2,
+            spaceBetween: 20
+        }
+    }
 });
+
+
+
+// Sign Modal
+let headerModalBtn = document.querySelector('.header__modal-btn ');
+let signModal = document.querySelector('.sign-modal');
+let signClose = document.querySelector('.sign-modal-close');
+let signModalBg = document.querySelector('.sign-modal-bg');
+
+headerModalBtn.addEventListener('click', (e) => {
+    signModal.classList.toggle('active');
+})
+signClose.addEventListener('click', (e) => {
+    signModal.classList.remove('active');
+})
+signModalBg.addEventListener('click', (e) => {
+    signModal.classList.remove('active');
+})
+
+// Register modal
+let signModalBtn = document.querySelector('.sign-modal-btn');
+let registerModal = document.querySelector('.register-modal');
+let registerClose = document.querySelector('.register-modal-close');
+let registerModalBg = document.querySelector('.register-modal-bg');
+
+signModalBtn.addEventListener('click', (e) => {
+    registerModal.classList.add('active');
+    signModal.classList.remove('active');
+})
+registerClose.addEventListener('click', (e) => {
+    registerModal.classList.remove('active');
+})
+registerModalBg.addEventListener('click', (e) => {
+    registerModal.classList.remove('active');
+})
