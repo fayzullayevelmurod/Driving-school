@@ -32,16 +32,18 @@ selectTabs.forEach(tab => {
 
 
 // Header modal
-const headerItems = document.querySelectorAll('.header__modal-item');
+const headerItems = document.querySelectorAll('.header__modal-select');
 
-headerItems.forEach(item => {
-    const optionTexts = item.querySelectorAll('.header__modal-option span');
+headerItems.forEach((item, index) => {
+    const headerItemsImg = item.querySelector('.header__modal-arrow');
+    item.addEventListener('click', () =>{
+        item.classList.toggle('active');
+        headerItemsImg.classList.toggle('active');
 
-    optionTexts.forEach(optionText => {
-        optionText.addEventListener('click', function() {
-            const selectSpan = document.querySelector('.header__modal-select span');
-            selectSpan.textContent = this.textContent;
-        });
+        if (index > 0) {
+            const prevItem = headerItems[index - 1];
+            prevItem.classList.remove('active');
+        }
     });
 });
 
@@ -213,12 +215,12 @@ var videoSlider = new Swiper(".videoSlider", {
 
 
 // Sign Modal
-let headerModalBtn = document.querySelector('.header__modal-btn ');
-let signModal = document.querySelector('.sign-modal');
+let homeLink = document.querySelector('.home-link');
+let signModal = document.querySelector('.sign-modal-wrap .sign-modal');
 let signClose = document.querySelector('.sign-modal-close');
 let signModalBg = document.querySelector('.sign-modal-bg');
 
-headerModalBtn.addEventListener('click', (e) => {
+homeLink.addEventListener('click', (e) => {
     signModal.classList.toggle('active');
 })
 signClose.addEventListener('click', (e) => {
@@ -229,12 +231,12 @@ signModalBg.addEventListener('click', (e) => {
 })
 
 // Register modal
-let signModalBtn = document.querySelector('.sign-modal-btn');
-let registerModal = document.querySelector('.register-modal');
+let headerModalBtn = document.querySelector('.header__modal-btn ');
+let registerModal = document.querySelector('.register-modal-wrap');
 let registerClose = document.querySelector('.register-modal-close');
 let registerModalBg = document.querySelector('.register-modal-bg');
 
-signModalBtn.addEventListener('click', (e) => {
+headerModalBtn.addEventListener('click', (e) => {
     registerModal.classList.add('active');
     signModal.classList.remove('active');
 })

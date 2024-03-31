@@ -264,11 +264,15 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     background: rgb(255, 255, 255, 0.05);
     width: 100%;
+    overflow: hidden;
     height: 50px;
+    transition: .3s ease all;
+}
+.header-modal .header__modal-select.active{
+    height: auto;
 }
 .header__modal-item .header__modal-link{
     width: 100%;
-    height: 100%;
     padding: 15px 20px;    
     display: flex;
     align-items: center;
@@ -277,44 +281,29 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
     line-height: 20px;
 }
-.header__modal-item .header__modal-link img{
+.header__modal-item .header__modal-arrow{
     transition: .3s ease all;
 }
-.header__modal-item .header__modal-link.active img{
+.header__modal-item .header__modal-arrow.active{
     transform: rotate(-180deg);
 }
 .header__modal-item .header__modal-option{
-    position: absolute;
-    z-index: 3;
-    top: 40px;
-    left: 0;
-    pointer-events: none;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
     border-radius: 5px;
-    background: rgb(107, 110, 114);
     transition: .3s ease all;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0px;
 }
-.header__modal-item .header__modal-select:focus +.header__modal-option{
-    top: 50px;
-    opacity: 1;
-    pointer-events: all;
-}
-.header__modal-item .header__modal-option span{
-    padding: 10px 20px;
-    cursor: pointer;
+.header__modal-item .header__modal-option a{
     color: #FFF;
     font-size: 13px;
     border-radius: 5px;
     line-height: 12px;
     transition: .3s ease all;
+    padding: 12px 20px;
 }
-.header__modal-item .header__modal-option span:hover{
-    background-color: #6c7b94;
-}
-
 .header__modal-items .header__modal-license{
     color: rgb(255, 255, 255, 0.6);
     font-size: 14px;
@@ -2315,9 +2304,10 @@ input::-webkit-inner-spin-button {
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 11;
     opacity: 0;
     pointer-events: none;
-    z-index: 11;
+    transition: .3s ease all;
     transform: translate(-50%, -50%);
     border-radius: 15px;
     background: rgb(255, 255, 255);
@@ -2327,15 +2317,14 @@ input::-webkit-inner-spin-button {
     align-items: center;
     gap: 25px;
     width: 370px;
-    transition: .3s ease all;
 }
 .sign-modal-wrap .sign-modal.active,
-.register-modal.active{
+.register-modal-wrap.active{
     opacity: 1;
     pointer-events: all;
 }
 .sign-modal-wrap .sign-modal.active+.sign-modal-bg,
-.register-modal.active+.register-modal-bg{
+.register-modal-wrap.active+.register-modal-bg{
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -2407,14 +2396,20 @@ input::-webkit-inner-spin-button {
 }
 
 /* Register modal */
-.register-modal{
+.register-modal-wrap{
     position: fixed;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    display: flex;
+    align-items: start;
+    gap: 30px;
     opacity: 0;
     pointer-events: none;
-    z-index: 11;
-    transform: translate(-50%, -50%);
+    transition: .3s ease all;
+}
+.register-modal{
     border-radius: 15px;
     background: rgb(65, 136, 255);
     padding: 50px 23px 60px;
@@ -2423,7 +2418,16 @@ input::-webkit-inner-spin-button {
     align-items: center;
     gap: 20px;
     width: 370px;
-    transition: .3s ease all;  
+}
+.register-modal-wrap .sign-modal{
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    padding: 50px 23px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 370px;
 }
 .register-modal-title h2,
 .register-modal-title p{
@@ -2445,6 +2449,28 @@ input::-webkit-inner-spin-button {
 .register-modal .register-modal-btn{
     margin-top: 13px;
 }
+
+.register-modal-wrap .register-or{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(181, 197, 224);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 33%;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+}
+
 
 
 /* Media start */
@@ -2522,6 +2548,11 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-width: 776px){
     .header-phone .header__phone-links{
         display: none;
+    }
+
+    .register-modal-wrap{
+        flex-direction: column;
+        gap: 20px;
     }
 }
 

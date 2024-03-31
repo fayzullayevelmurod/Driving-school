@@ -74,6 +74,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="header-modal">
                 <div class="header__modal-top">
                     <a href="#!" class="header-menu-logo">
@@ -89,26 +90,26 @@
                     </div>
                 </div>
                 <div class="header__modal-items">
-                    <div class="header__modal-item">
-                        <a href="#!" class="header__modal-link header__modal-select">
-                            <span>О нас</span> <img src="images/icons/arrow-select.svg" alt="">
+                    <div class="header__modal-item header__modal-select">
+                        <a href="#!" class="header__modal-link">
+                            <span>О нас</span> <img src="images/icons/arrow-select.svg" alt="" class="header__modal-arrow">
                         </a>
 
                         <div class="header__modal-option">
-                            <span>О нас</span>
-                            <span>О нас</span>
-                            <span>О нас</span>
+                            <a href="#!">О нас</a>
+                            <a href="#!">О нас</a>
+                            <a href="#!">О нас</a>
                         </div>
                     </div>
-                    <div class="header__modal-item">
-                        <a href="#!" class="header__modal-link header__modal-select">
-                            <span>Цены</span> <img src="images/icons/arrow-select.svg" alt="">
+                    <div class="header__modal-item header__modal-select">
+                        <a href="#!" class="header__modal-link">
+                            <span>Цены</span> <img src="images/icons/arrow-select.svg" alt="" class="header__modal-arrow">
                         </a>
 
                         <div class="header__modal-option">
-                            <span>Цены</span>
-                            <span>Цены</span>
-                            <span>Цены</span>
+                            <a href="#!">Цены</a>
+                            <a href="#!">Цены</a>
+                            <a href="#!">Цены</a>
                         </div>
                     </div>
                     <div class="header__modal-item">
@@ -126,26 +127,26 @@
                             <span>Отзывы</span>
                         </a>
                     </div>
-                    <div class="header__modal-item">
-                        <a href="#!" class="header__modal-link header__modal-select">
-                            <span>Услуги</span> <img src="images/icons/arrow-select.svg" alt="">
+                    <div class="header__modal-item header__modal-select">
+                        <a href="#!" class="header__modal-link">
+                            <span>Услуги</span> <img src="images/icons/arrow-select.svg" alt="" class="header__modal-arrow">
                         </a>
 
                         <div class="header__modal-option">
-                            <span>Услуги</span>
-                            <span>Услуги</span>
-                            <span>Услуги</span>
+                            <a href="#!">Услуги</a>
+                            <a href="#!">Услуги</a>
+                            <a href="#!">Услуги</a>
                         </div>
                     </div>
-                    <div class="header__modal-item">
-                        <a href="#!" class="header__modal-link header__modal-select">
-                            <span>Полезное</span> <img src="images/icons/arrow-select.svg" alt="">
+                    <div class="header__modal-item header__modal-select">
+                        <a href="#!" class="header__modal-link">
+                            <span>Полезное</span> <img src="images/icons/arrow-select.svg" alt="" class="header__modal-arrow">
                         </a>
 
                         <div class="header__modal-option">
-                            <span>Полезное</span>
-                            <span>Полезное</span>
-                            <span>Полезное</span>
+                            <a href="#!">Полезное</a>
+                            <a href="#!">Полезное</a>
+                            <a href="#!">Полезное</a>
                         </div>
                     </div>
                     <div class="header__modal-item">
@@ -153,15 +154,15 @@
                             <span>Контакты</span>
                         </a>
                     </div>
-                    <div class="header__modal-item">
-                        <a href="#!" class="header__modal-link header__modal-select">
-                            <span>Наши филиалы</span> <img src="images/icons/arrow-select.svg" alt="">
+                    <div class="header__modal-item header__modal-select">
+                        <a href="#!" class="header__modal-link">
+                            <span>Наши филиалы</span> <img src="images/icons/arrow-select.svg" alt="" class="header__modal-arrow">
                         </a>
 
                         <div class="header__modal-option">
-                            <span>Наши филиалы</span>
-                            <span>Наши филиалы</span>
-                            <span>Наши филиалы</span>
+                            <a href="#!">Наши филиалы</a>
+                            <a href="#!">Наши филиалы</a>
+                            <a href="#!">Наши филиалы</a>
                         </div>
                     </div>
                     <div class="header__modal-item">
@@ -1132,29 +1133,45 @@
     </div>
 
     <!-- Register modal -->
-    <div class="register-modal-wrap">
-        <div class="register-modal">
-            <button class="register-modal-close"><img src="images/icons/close.svg" alt=""></button>
-            <div class="register-modal-title">
-                <h2>Договор онлайн</h2>
-                <p>Зарегистрируйтесь сейчас и получите доступ к онлайн сервисам и бонусам</p>
-            </div>
-            <div class="register-modal-body">
-                <div class="register-modal-text">
-                    <img src="images/icons/register-modal-icon1.svg" alt="">
-                    300 бонусов в подарок
+    <div class="register-modals">
+        <div class="register-modal-wrap">
+            <div class="sign-modal">
+                <div class="sign-modal-info">
+                    <div class="sign-modal-title">
+                        <h2>Заявка на обучение</h2>
+                        <p>Менеджер перезвонит в течение часа и запишет вас на удобное время</p>
+                    </div>
                 </div>
-                <div class="register-modal-text">
-                    <img src="images/icons/register-modal-icon2.svg" alt="">
-                    Доступ к теории и практике
-                </div>
-                <div class="register-modal-text">
-                    <img src="images/icons/register-modal-icon3.svg" alt="">
-                    Онлайн оплата
+                <div class="sign-modal-form">
+                    <input type="text" name="name" placeholder="Имя" class="sign-modal-inp">
+                    <input type="number" name="name" placeholder="Телефон" class="sign-modal-inp">
+                    <button class="sign-modal-btn main-btn">Записаться</button>
                 </div>
             </div>
-
-            <button class="register-modal-btn main-btn">Зарегистрироваться</button>
+            <div class="register-or">ИЛИ</div>
+            <div class="register-modal">
+                <button class="register-modal-close"><img src="images/icons/close.svg" alt=""></button>
+                <div class="register-modal-title">
+                    <h2>Договор онлайн</h2>
+                    <p>Зарегистрируйтесь сейчас и получите доступ к онлайн сервисам и бонусам</p>
+                </div>
+                <div class="register-modal-body">
+                    <div class="register-modal-text">
+                        <img src="images/icons/register-modal-icon1.svg" alt="">
+                        300 бонусов в подарок
+                    </div>
+                    <div class="register-modal-text">
+                        <img src="images/icons/register-modal-icon2.svg" alt="">
+                        Доступ к теории и практике
+                    </div>
+                    <div class="register-modal-text">
+                        <img src="images/icons/register-modal-icon3.svg" alt="">
+                        Онлайн оплата
+                    </div>
+                </div>
+    
+                <button class="register-modal-btn main-btn">Зарегистрироваться</button>
+            </div>
         </div>
         <div class="register-modal-bg"></div>
     </div>
