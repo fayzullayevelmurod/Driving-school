@@ -83,9 +83,10 @@ installTabs.forEach(function (tab, index) {
 
 
 // Video
-document.querySelectorAll('.play-video').forEach(function(playButton) {
+let videoName = document.querySelectorAll('.review-video__name');
+document.querySelectorAll('.play-video').forEach(function(playButton, index) {
     playButton.addEventListener('click', function() {
-        var video = this.parentElement.querySelector('.my-video');
+        let video = this.parentElement.querySelector('.my-video');
         if (video.paused) {
             video.play();
             video.setAttribute('controls', 'controls');
@@ -94,6 +95,7 @@ document.querySelectorAll('.play-video').forEach(function(playButton) {
             video.removeAttribute('controls');
         }
         this.style.display = 'none';
+        videoName[index].style.display = 'none';
     });
 });
 
@@ -108,7 +110,7 @@ var carsSlider = new Swiper(".carsSlider", {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        320: {
+        300: {
             slidesPerView: 1.2,
             spaceBetween: 10
         },
@@ -137,7 +139,7 @@ var theorySlider = new Swiper(".theorySlider", {
         prevEl: ".swiper-button-prev",
     },
      breakpoints: {
-        320: {
+        300: {
             slidesPerView: 1.2,
             spaceBetween: 10
         },
@@ -165,7 +167,7 @@ var footballSlider = new Swiper(".footballSlider", {
         prevEl: ".football-slider-arrow .swiper-button-prev",
     },
      breakpoints: {
-        320: {
+        300: {
             slidesPerView: 1.2,
             spaceBetween: 10
         },
@@ -193,15 +195,19 @@ var videoSlider = new Swiper(".videoSlider", {
         prevEl: ".video__sec-arrow .swiper-button-prev",
     },
      breakpoints: {
-        320: {
-            slidesPerView: 1.3,
+        300: {
+            slidesPerView: 1.6,
             spaceBetween: 10
         },
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 20
+        370: {
+            slidesPerView: 1.8,
+            spaceBetween: 10
         },
-        776: {
+        400: {
+            slidesPerView: 2.2,
+            spaceBetween: 10
+        },
+        470: {
             slidesPerView: 2.5,
             spaceBetween: 20
         },
