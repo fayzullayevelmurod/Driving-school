@@ -1361,9 +1361,12 @@ input::-webkit-inner-spin-button {
     box-shadow: 0px 5.32px 66.55px 0px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(47.91px);
     background: rgb(255, 255, 255);
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 23px;
+}
+.install-info .install-block.active{
+    display: flex;
 }
 .install-block .install__block-top{
     display: flex;
@@ -1439,14 +1442,11 @@ input::-webkit-inner-spin-button {
     height: 4px;
 }
 .install__block-bottom .install__block-items{
-    display: none;
+    display: flex;
     align-items: start;
     padding: 0px 4px;
     margin-top: -25px;
     gap: 6.65px;
-}
-.install__block-bottom .install__block-items.active{
-    display: flex;
 }
 .install__block-bottom .install__block-item{
     display: flex;

@@ -619,7 +619,7 @@
                                 </button>
                             </div>
 
-                            <div class="install-block">
+                            <div class="install-block active">
                                 <div class="install__block-top">
                                     <div class="install-tabs">
                                         <button class="install-tab active">3 месяца</button>
@@ -643,7 +643,7 @@
                                 </div>
                                 <div class="install__block-bottom">
                                     <div class="install__block-line"></div>
-                                    <div class="install__block-items active" id="installItems1">
+                                    <div class="install__block-items">
                                         <div class="install__block-item">
                                             <div class="dot"></div>
                                             <div class="install__block-price">
@@ -673,8 +673,34 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div class="install__block-items" id="installItems2">
+                            <div class="install-block">
+                                <div class="install__block-top">
+                                    <div class="install-tabs">
+                                        <button class="install-tab">3 месяца</button>
+                                        <button class="install-tab active">4 месяца</button>
+                                        <button class="install-tab">5 месяца</button>
+                                    </div>
+                                    <div class="install__block-links">
+                                        <a href="#!" class="install__block-link">
+                                            <img src="images/icons/install-link-icon1.svg" alt="">
+                                            Без переплаты
+                                        </a>
+                                        <a href="#!" class="install__block-link">
+                                            <img src="images/icons/install-link-icon2.svg" alt="">
+                                            Без участия банка
+                                        </a>
+                                    </div>
+                                    <div class="install__block-total">
+                                        <b>5000 ₽</b>
+                                        <span>сейчас</span>
+                                    </div>
+                                </div>
+                                <div class="install__block-bottom">
+                                    <div class="install__block-line"></div>
+                                    <div class="install__block-items">
                                         <div class="install__block-item">
                                             <div class="dot"></div>
                                             <div class="install__block-price">
@@ -697,8 +723,34 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div class="install__block-items" id="installItems3">
+                            <div class="install-block">
+                                <div class="install__block-top">
+                                    <div class="install-tabs">
+                                        <button class="install-tab">3 месяца</button>
+                                        <button class="install-tab">4 месяца</button>
+                                        <button class="install-tab active">5 месяца</button>
+                                    </div>
+                                    <div class="install__block-links">
+                                        <a href="#!" class="install__block-link">
+                                            <img src="images/icons/install-link-icon1.svg" alt="">
+                                            Без переплаты
+                                        </a>
+                                        <a href="#!" class="install__block-link">
+                                            <img src="images/icons/install-link-icon2.svg" alt="">
+                                            Без участия банка
+                                        </a>
+                                    </div>
+                                    <div class="install__block-total">
+                                        <b>5000 ₽</b>
+                                        <span>сейчас</span>
+                                    </div>
+                                </div>
+                                <div class="install__block-bottom">
+                                    <div class="install__block-line"></div>
+                                    <div class="install__block-items">
                                         <div class="install__block-item">
                                             <div class="dot"></div>
                                             <div class="install__block-price">
@@ -862,7 +914,7 @@
                                     <p class="sign-form-text">Познакомьтесь с инструктором, потестируйте машины </p>
                                     <div class="sign-form">
                                         <input type="text" name="name" placeholder="Имя" class="sign-form-inp">
-                                        <input type="number" name="phone" placeholder="Телефон" class="sign-form-inp">
+                                        <input type="text" name="phone" placeholder="Телефон" class="sign-form-inp phone-inp">
                                         <button class="sign-form-btn main-btn">Записаться</button>
                                     </div>
                                 </div>
@@ -1134,11 +1186,13 @@
                     <p>Менеджер перезвонит в течение часа и запишет вас на удобное время</p>
                 </div>
             </div>
-            <div class="sign-modal-form">
-                <input type="text" name="name" placeholder="Имя" class="sign-modal-inp">
-                <input type="number" name="name" placeholder="Телефон" class="sign-modal-inp">
-                <button class="sign-modal-btn main-btn">Записаться</button>
-            </div>
+            <form>
+                <div class="sign-modal-form">
+                    <input type="text" name="name" placeholder="Имя" class="sign-modal-inp">
+                    <input type="text" name="name" placeholder="Телефон" class="sign-modal-inp phone-inp">
+                    <button class="sign-modal-btn main-btn">Записаться</button>
+                </div>
+            </form>
         </div>
         <div class="sign-modal-bg"></div>
     </div>
@@ -1153,11 +1207,13 @@
                         <p>Менеджер перезвонит в течение часа и запишет вас на удобное время</p>
                     </div>
                 </div>
-                <div class="sign-modal-form">
-                    <input type="text" name="name" placeholder="Имя" class="sign-modal-inp">
-                    <input type="number" name="name" placeholder="Телефон" class="sign-modal-inp">
-                    <button class="sign-modal-btn main-btn">Отправить заявку</button>
-                </div>
+                <form>
+                    <div class="sign-modal-form">
+                        <input type="text" name="name" placeholder="Имя" class="sign-modal-inp">
+                        <input type="text" name="name" placeholder="Телефон" class="sign-modal-inp phone-inp">
+                        <button class="sign-modal-btn main-btn">Отправить заявку</button>
+                    </div>
+                </form>
             </div>
             <div class="register-or">ИЛИ</div>
             <div class="register-modal">
@@ -1190,6 +1246,8 @@
 
 
 
+    <!-- Imask js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.3.0/imask.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Main js -->

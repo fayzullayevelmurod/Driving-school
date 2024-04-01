@@ -51,8 +51,7 @@ headerItems.forEach((item, index) => {
 
 // Time tabs
 let timeTabs = document.querySelectorAll('.install__time-tab');
-let installTabs = document.querySelectorAll('.install-tab');
-let installItems = document.querySelectorAll('.install__block-items');
+let installBlocks = document.querySelectorAll('.install-block');
 
 timeTabs.forEach(function (tab, index) {
     tab.addEventListener('click', function (e) {
@@ -60,22 +59,12 @@ timeTabs.forEach(function (tab, index) {
             tab.classList.remove('active');
         });
         tab.classList.add('active');
-    })
-});
 
-// Install  tabs
-installTabs.forEach(function (tab, index) {
-    tab.addEventListener('click', function (e) {
-        installTabs.forEach(function (tab) {
-            tab.classList.remove('active');
-        });
-        tab.classList.add('active');
-
-        installItems.forEach(function (item, i) {
+        installBlocks.forEach(function (installBlock, i) {
             if (i === index) {
-                item.classList.add('active');
+                installBlock.classList.add('active');
             } else {
-                item.classList.remove('active');
+                installBlock.classList.remove('active');
             }
         });
     })
@@ -252,3 +241,28 @@ registerClose.addEventListener('click', (e) => {
 registerModalBg.addEventListener('click', (e) => {
     registerModal.classList.remove('active');
 })
+
+
+// Imask input
+
+document.addEventListener('DOMContentLoaded', function () {
+    let phoneInputs = document.querySelectorAll('.phone-inp');
+
+    function applyMask(input) {
+        let maskOptions = {
+            mask: '+7 (000) 000-00-00',
+            lazy: false
+        };
+
+        input.placeholder = 'Телефон';
+
+        input.addEventListener('focus', function () {
+            new IMask(input, maskOptions);
+        });
+    }
+
+    phoneInputs.forEach(function (phoneInp) {
+        applyMask(phoneInp);
+    });
+
+});
