@@ -51,24 +51,24 @@ headerItems.forEach((item, index) => {
 
 // Time tabs
 let timeTabs = document.querySelectorAll('.install__time-tab');
-let installBlocks = document.querySelectorAll('.install-block');
+let installTabs = document.querySelectorAll('.install-tabs .install-tab'); 
+let installItems = document.querySelectorAll('.install__block-bottom');
 
-timeTabs.forEach(function (tab, index) {
-    tab.addEventListener('click', function (e) {
-        timeTabs.forEach(function (tab) {
-            tab.classList.remove('active');
-        });
-        tab.classList.add('active');
+// Function to toggle active class based on index
+function toggleActive(index) {
+    timeTabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
+    installTabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
+    installItems.forEach((item, i) => item.classList.toggle('active', i === index));
+}
 
-        installBlocks.forEach(function (installBlock, i) {
-            if (i === index) {
-                installBlock.classList.add('active');
-            } else {
-                installBlock.classList.remove('active');
-            }
-        });
-    })
-});
+// Event listener for timeTabs
+timeTabs.forEach((tab, index) => tab.addEventListener('click', () => toggleActive(index)));
+
+// Event listener for installTabs
+installTabs.forEach((tab, index) => tab.addEventListener('click', () => toggleActive(index)));
+
+
+
 
 
 // Video

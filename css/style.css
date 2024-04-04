@@ -370,7 +370,8 @@ input::-webkit-inner-spin-button {
 .home .home-mob-title{
     position: absolute;
     top: 5px;
-    left: -4px;
+    left: 50%;
+    transform: translate(-50%);
     display: none;
     background: linear-gradient(180.00deg, rgba(213, 224, 241, 0.88),rgba(213, 224, 241, 0));
     -webkit-background-clip: text;
@@ -1361,19 +1362,16 @@ input::-webkit-inner-spin-button {
     box-shadow: 0px 5.32px 66.55px 0px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(47.91px);
     background: rgb(255, 255, 255);
-    display: none;
-    flex-direction: column;
-    gap: 23px;
-}
-.install-info .install-block.active{
     display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 .install-block .install__block-top{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.install__block-top .install-tabs{
+.install-block .install-tabs{
     padding: 5px;
     border-radius: 133.09px;
     background: rgb(237, 244, 255);
@@ -1381,7 +1379,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     gap: 5px;
 }
-.install__block-top .install-tab{
+.install-block .install-tab{
     position: relative;
     width: 100px;
     border-radius: 133.09px;
@@ -1393,17 +1391,17 @@ input::-webkit-inner-spin-button {
     text-align: center;
     padding: 8px 0;
 }
-.install__block-top .install-tab.active{
+.install-block .install-tab.active{
     box-shadow: 0px 2.66px 19.96px 0px rgba(65, 136, 255, 0.5);
     background: rgb(65, 136, 255);
     color: #FFF;
 }
-.install__block-top .install__block-links{
+.install-block .install__block-links{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.install__block-top .install__block-link{
+.install-block .install__block-link{
     display: flex;
     align-items: center;
     gap: 7px;
@@ -1411,18 +1409,18 @@ input::-webkit-inner-spin-button {
     font-size: 13px;
     line-height: 19.96px;
 }
-.install__block-top .install__block-total{
+.install-block .install__block-total{
     display: flex;
     align-items: end;
     gap: 7px;
 }
-.install__block-top .install__block-total b{
+.install-block .install__block-total b{
     color: rgb(47, 53, 63);
     font-size: 27px;
     font-weight: 700;
     line-height: 34.6px;
 }
-.install__block-top .install__block-total span{
+.install-block .install__block-total span{
     color: rgb(168, 183, 207);
     font-size: 20px;
     font-weight: 700;
@@ -1430,10 +1428,19 @@ input::-webkit-inner-spin-button {
 }
 
 .install-block .install__block-bottom{
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    width: fit-content;
+}
+.install-block .install__block-bottom.active{
+    display: flex;
+}
+.install__block-bottom .install__block-box{
     display: flex;
     flex-direction: column;
-    gap: 17px;
-    width: fit-content;
+    gap: 9px;
+    max-width: max-content;
 }
 .install__block-bottom .install__block-line{
     border-radius: 6.65px;
@@ -1445,7 +1452,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: start;
     padding: 0px 4px;
-    margin-top: -25px;
+    margin-top: -17px;
     gap: 6.65px;
 }
 .install__block-bottom .install__block-item{
@@ -1551,7 +1558,7 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
     line-height: 34px;
 }
-.certificate-content .certificate-title a{
+.certificate-content .certificate-title p{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -1645,7 +1652,7 @@ input::-webkit-inner-spin-button {
     line-height: 18px;
     text-align: center;
 }
-.medical-modal .medical-modal-link{
+.medical-modal .medical-modal-spn{
     color: rgb(107, 126, 158);
     font-size: 14px;
     line-height: 18px;
@@ -2875,8 +2882,8 @@ input::-webkit-inner-spin-button {
     }
 
     .home-content .home-location video {
-        width: 245px;
-        height: 324px;
+        width: 100%;
+        height: 100%;
         border-radius: 10px;
     }
 
@@ -2942,7 +2949,7 @@ input::-webkit-inner-spin-button {
         line-height: 13px;
     }
     .theory-content .theory__branch-box{
-        width: 240px;
+        width: 80%;
         gap: 4px;
         padding: 15px 37px 10px 10px;
     }
@@ -2960,6 +2967,9 @@ input::-webkit-inner-spin-button {
         line-height: 13px;
     }
 
+    .iceberg {
+        padding: 60px 0px 130px;
+    }
     .iceberg .iceberg-title-wrap {
         gap: 20px;
     }
@@ -3000,6 +3010,7 @@ input::-webkit-inner-spin-button {
         font-size: 17px;
         line-height: 20px;
         margin-top: 3px;
+        display: block;
     }
     .iceberg-content .iceberg-img {
         margin-top: -90px;
@@ -3012,7 +3023,7 @@ input::-webkit-inner-spin-button {
         padding: 14px 22px 15px 22px;
         gap: 5px;
         overflow: hidden;
-        max-width: 270px;
+        width: 100%;
     }
     .iceberg-content .iceberg-texts .iceberg-text{
         font-size: 10px;
@@ -3277,38 +3288,37 @@ input::-webkit-inner-spin-button {
     }
     .install-info .install-block {
         padding: 15px 15px 20px;
-        gap: 16px;
+        gap: 9px;
     }
-    .install__block-top .install-tab{
+    .install-block .install-tab{
         font-size: 10px;
         line-height: 11px;
         padding: 6px 0;
         width: 100%;
     }
-    .install__block-top .install-tabs {
+    .install-block .install-tabs {
         padding: 4px;
         gap: 4px;
     }
     .install-block .install__block-top{
         gap: 9px;
     }
-    .install__block-top .install__block-links{
-        justify-content: space-between;
+    .install-block .install__block-links{
         gap: 10px;
     }
-    .install__block-top .install__block-link{
+    .install-block .install__block-link{
         font-size: 10px;
         line-height: 15px;
         gap: 5px;
     }
-    .install__block-top .install__block-link img{
+    .install-block .install__block-link img{
         width: 13px;
     }
-    .install__block-top .install__block-total b{
+    .install-block .install__block-total b{
         font-size: 20px;
         line-height: 26px;
     }
-    .install__block-top .install__block-total span{
+    .install-block .install__block-total span{
         font-size: 15px;
         line-height: 26px;
     }
@@ -3323,11 +3333,13 @@ input::-webkit-inner-spin-button {
     .install-content .install-info{
         gap: 17px;
     }
-    .install-block .install__block-bottom{
-        width: 100%;
-    }
     .install__block-bottom .install__block-items{
         justify-content: space-between;
+        margin-top: -15px;
+    }
+    .install-block .install__block-bottom{
+        width: 100%;
+        gap: 15px;
     }
 
     .install-video .install__video-info{
@@ -3351,7 +3363,16 @@ input::-webkit-inner-spin-button {
     .install-video .install-video-img{
         height: 100%;
     }
-
+    .install__block-bottom .install__block-box{
+        max-width: 100%;
+    }
+    .install__block-bottom .install__block-item .dot{
+        width: 9px;
+        height: 9px;
+    }
+    .install__block-bottom .install__block-item{
+        gap: 10px;
+    }
 
     .certificate .certificate-content{
         justify-content: space-between;
@@ -3550,13 +3571,20 @@ input::-webkit-inner-spin-button {
         gap: 20px;
     }
     .result-content .result-item{
+        position: relative;
+        justify-content: end;
         padding: 7px 21px;
         height: 37px;
+        width: 125px;
         border-radius: 10px;
         gap: 5px;
     }
     .result-content .result-item:nth-child(1){
-        padding-left: 0px;
+        gap: 0;
+    }
+    .result-item .result-item-star img{
+        width: 23px;
+        height: 23px;
     }
     .result-item .result-item-star span{
         font-size: 16px;
@@ -3569,7 +3597,9 @@ input::-webkit-inner-spin-button {
         display: block;
     }
     .result-content .result-item:nth-child(1) .result-item-img2{
-        margin-top: 6px;
+        position: absolute;
+        left: 5px;
+        top: -4px;
     }
 
     
@@ -3846,8 +3876,8 @@ input::-webkit-inner-spin-button {
 
 @media only screen and (max-width: 470px){
     .theory-info .theory__info-video video{
-        width: 270px;
-        height: 278px;
+        width: 100%;
+        height: 100%;
     }
     .install-content .install-info{
         width: 100%;
