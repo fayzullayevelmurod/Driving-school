@@ -54,17 +54,12 @@ let timeTabs = document.querySelectorAll('.install__time-tab');
 let installTabs = document.querySelectorAll('.install-tabs .install-tab'); 
 let installItems = document.querySelectorAll('.install__block-bottom');
 
-// Function to toggle active class based on index
 function toggleActive(index) {
     timeTabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
     installTabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
     installItems.forEach((item, i) => item.classList.toggle('active', i === index));
 }
-
-// Event listener for timeTabs
 timeTabs.forEach((tab, index) => tab.addEventListener('click', () => toggleActive(index)));
-
-// Event listener for installTabs
 installTabs.forEach((tab, index) => tab.addEventListener('click', () => toggleActive(index)));
 
 
