@@ -886,6 +886,8 @@ input::-webkit-inner-spin-button {
 }
 .happy .happy-content{
     position: relative;
+    width: 970px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -944,9 +946,10 @@ input::-webkit-inner-spin-button {
 
 .happy .happy-cards{
     margin-top: 42px;
+    padding: 0px 27px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 50px;
     align-items: start;
 }
 .happy-cards .happy-card{
@@ -1017,6 +1020,8 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    width: 970px;
+    margin: 0 auto;
 }
 .offer-card .offer__card-group{
     display: flex;
@@ -2592,12 +2597,18 @@ input::-webkit-inner-spin-button {
         width: 100%;
     }
 
+    .happy .happy-content,
+    .offer-content .offer-card{
+        width: 100%;
+    }
     .happy .happy-cards{
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
         margin-top: 33px;
     }
+
+
     .offer .offer-content {
         gap: 130px;
     }
@@ -3098,6 +3109,7 @@ input::-webkit-inner-spin-button {
     }
     .happy .happy-cards{
         justify-content: start;
+        padding: 0;
     }
     .happy .happy-card{
         flex-direction: initial;
