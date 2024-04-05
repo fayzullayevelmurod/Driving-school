@@ -51,16 +51,28 @@ headerItems.forEach((item, index) => {
 
 // Time tabs
 let timeTabs = document.querySelectorAll('.install__time-tab');
-let installTabs = document.querySelectorAll('.install-tabs .install-tab'); 
-let installItems = document.querySelectorAll('.install__block-bottom');
+let installItems = document.querySelectorAll('.install-block');
 
 function toggleActive(index) {
     timeTabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
-    installTabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
     installItems.forEach((item, i) => item.classList.toggle('active', i === index));
 }
 timeTabs.forEach((tab, index) => tab.addEventListener('click', () => toggleActive(index)));
-installTabs.forEach((tab, index) => tab.addEventListener('click', () => toggleActive(index)));
+
+
+let installTabs = document.querySelectorAll('.install-tabs');
+installTabs.forEach(tab => {
+    let innerTabs = tab.querySelectorAll('.install-tab');
+    innerTabs.forEach(innerTab => {
+        innerTab.addEventListener('click', function() {
+            let activeTabs = tab.querySelectorAll('.install-tab.active');
+            activeTabs.forEach(activeTab => {
+                activeTab.classList.remove('active');
+            });
+            innerTab.classList.add('active');
+        });
+    });
+});
 
 
 
