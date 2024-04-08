@@ -193,15 +193,15 @@ var videoSlider = new Swiper(".videoSlider", {
      breakpoints: {
         300: {
             slidesPerView: 1.6,
-            spaceBetween: 10
+            spaceBetween: 20
         },
         370: {
             slidesPerView: 1.8,
-            spaceBetween: 10
+            spaceBetween: 20
         },
         400: {
             slidesPerView: 2.2,
-            spaceBetween: 10
+            spaceBetween: 20
         },
         470: {
             slidesPerView: 2.5,
@@ -217,13 +217,15 @@ var videoSlider = new Swiper(".videoSlider", {
 
 
 // Sign Modal
-let homeLink = document.querySelector('.home-link');
+let signOpenBtns = document.querySelectorAll('.sign-open-btn');
 let signModal = document.querySelector('.sign-modal-wrap .sign-modal');
 let signClose = document.querySelector('.sign-modal-close');
 let signModalBg = document.querySelector('.sign-modal-bg');
 
-homeLink.addEventListener('click', (e) => {
-    signModal.classList.toggle('active');
+signOpenBtns.forEach(function (signOpenBtn) {
+    signOpenBtn.addEventListener('click', (e) => {
+        signModal.classList.toggle('active');
+    })
 })
 signClose.addEventListener('click', (e) => {
     signModal.classList.remove('active');

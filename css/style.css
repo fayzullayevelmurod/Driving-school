@@ -3022,6 +3022,7 @@ input::-webkit-inner-spin-button {
         line-height: 20px;
         margin-top: 3px;
         display: block;
+        max-width: 320px;
     }
     .iceberg-content .iceberg-img {
         margin-top: -90px;
@@ -3199,6 +3200,7 @@ input::-webkit-inner-spin-button {
         margin-top: -20px;
     }
     .offer-card .offer__card-phone .offer-phone-img,
+    .offer-card .offer__card-phone .offer-phone-img2,
     .offer__card-phone .offer__phone-info,
     .offer__phone-info .offer__phone-text{
         width: 100%;
@@ -3683,11 +3685,11 @@ input::-webkit-inner-spin-button {
         gap: 12px;
     }
     .video__sec-slider .review-video{
-        width: 168px;
+        width: 100%;
     }
     .video__sec-slider .review-video video {
-        width: 168px;
-        height: 300px;
+        width: 1005;
+        height: 100%;
         border-radius: 10px;
     }
     .review-video .play-video{
