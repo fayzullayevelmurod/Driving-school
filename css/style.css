@@ -366,6 +366,7 @@ input::-webkit-inner-spin-button {
 /* Home start */
 .home{
     position: relative;
+    padding-bottom: 50px;
 }
 .home .home-mob-title{
     position: absolute;
@@ -384,7 +385,6 @@ input::-webkit-inner-spin-button {
 }
 .home .home-content{
     padding: 77px 0px 67px;
-    border-bottom: 1px solid rgb(221, 229, 243);
     position: relative;
     display: flex;
     gap: 61px;
@@ -453,6 +453,60 @@ input::-webkit-inner-spin-button {
     width: 375px;
     height: 500px;
     border-radius: 15px;
+}
+
+
+.home .all-fevral{
+    position: relative;
+    background: rgba(255, 147, 30, 1);
+    padding: 15px 15px;
+    width: 100%;
+}
+.all-fevral .all-fevral-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.all-fevral .all-fevral-calendar{
+    position: absolute;
+    left: -100px;
+    top: -15px;
+}
+.all-fevral .all-fevral-discount{
+    position: absolute;
+    right: -130px;
+    top: -15px;
+}
+.all-fevral-content .all-fevral-title{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 31px;
+    color: #FFF;
+}
+.all-fevral-content .all-fevral-title span{
+    border: 2px solid rgba(255, 255, 255, 1);
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+.all-fevral-content .all-fevral-link{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    color: rgba(34, 34, 34, 1);
+    background: rgba(255, 255, 255, 1);
+}
+.all-fevral-content .all-fevral-link img{
+    display: none;
 }
 /* Home end */
 
@@ -1119,6 +1173,7 @@ input::-webkit-inner-spin-button {
 
 .offer__phone-info .offer__phone-text{
     position: relative;
+    left: 10px;
     width: 229px;
     color: rgb(255, 255, 255);
     font-size: 13px;
@@ -1144,7 +1199,7 @@ input::-webkit-inner-spin-button {
 
 .offer-content .offer-items{
     display: flex;
-    gap: 30px;
+    gap: 80px;
     padding: 0 40px 70px;
     border-bottom: 1px solid rgb(221, 229, 243);
 }
@@ -1191,7 +1246,6 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: end;
     gap: 50px;
-    margin-top: -82px;
 }
 .offer-items .offer-left-items{
     display: flex;
@@ -1210,7 +1264,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     padding: 13px 20px;
     width: 100%;
-    height: 70px;
+    height: 115px;
     border-radius: 10px;
     box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(36px);
@@ -1221,6 +1275,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 115px;
     gap: 20px;
     border-radius: 10px;
     background: rgb(223, 236, 255); 
@@ -1235,6 +1290,23 @@ input::-webkit-inner-spin-button {
 }
 .offer-big-item2 .offer-item-title span{
     color: rgb(65, 136, 255);
+}
+
+.offer-items-wrap .offer-download-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 147, 30, 1);
+    border-radius: 10px;
+}
+.offer-items-wrap .offer-download-item .offer-item-title{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFF;
 }
 
 .offer-items .offer-right-items{
@@ -2898,6 +2970,31 @@ input::-webkit-inner-spin-button {
         border-radius: 10px;
     }
 
+    .all-fevral .all-fevral-content{
+        justify-content: space-between;
+    }
+    .all-fevral-content .all-fevral-title{
+        font-size: 16px;
+        line-height: 19px;
+        max-width: 219px;
+    }
+    .all-fevral-content .all-fevral-title span{
+        padding: 2px 4px;
+        border-radius: 5px;
+    }
+    .all-fevral-content .all-fevral-link{
+        width: 40px;
+        height: 40px;
+    }
+    .all-fevral .all-fevral-calendar,
+    .all-fevral .all-fevral-discount,
+    .all-fevral-content .all-fevral-link span{
+        display: none;
+    }
+    .all-fevral-content .all-fevral-link img{
+        display: flex;
+    }
+
     .cars{
         padding-top: 0;
     }
@@ -3211,6 +3308,7 @@ input::-webkit-inner-spin-button {
         width: 117.5%;
     }
     .offer__phone-info .offer__phone-text{
+        left: 0;
         font-size: 13px;
         line-height: 16px;
     }
