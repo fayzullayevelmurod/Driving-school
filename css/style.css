@@ -590,7 +590,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
 }
 
-.cars-content .cars-title h1{
+.cars-content .cars-title h2{
     max-width: 300px;
     font-size: 40px;
     font-weight: 700;
@@ -598,7 +598,7 @@ input::-webkit-inner-spin-button {
     color: rgb(65, 136, 254);
     margin-left: 24px;
 }
-.cars-content .cars-title h1 span{
+.cars-content .cars-title h2 span{
     color: rgb(47, 53, 63);
 }
 .cars-content .cars-title .title-line-arrow{
@@ -1095,7 +1095,7 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     margin-bottom: 30px;
 }
-.offer-card .offer__card-title h1,
+.offer-card .offer__card-title h2,
 .offer-card .offer__card-title span{
     color: rgb(51, 32, 12);
     font-size: 40px;
@@ -1359,7 +1359,7 @@ input::-webkit-inner-spin-button {
     gap: 11px;
     max-width: 382px;
 }
-.install-content .install-title h1{
+.install-content .install-title h2{
     color: rgb(47, 53, 63);
     font-size: 40px;
     font-weight: 600;
@@ -1629,7 +1629,7 @@ input::-webkit-inner-spin-button {
     gap: 16px;
     max-width: 433px;
 }
-.certificate-content .certificate-title h1{
+.certificate-content .certificate-title h2{
     color: rgb(47, 53, 63);
     font-size: 30px;
     font-weight: 700;
@@ -2009,7 +2009,7 @@ input::-webkit-inner-spin-button {
 .result-content .result-text:nth-child(2) b{
     color: rgb(255, 147, 30);
 }
-.result-content .result-text h2{
+.result-content .result-text h3{
     color: rgb(47, 53, 63);
     font-size: 30px;
     font-weight: 700;
@@ -2068,7 +2068,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     gap: 16px;
 }
-.football-top .football-title h1{
+.football-top .football-title h2{
     color: rgb(47, 53, 63);
     font-size: 30px;
     font-weight: 700;
@@ -2114,7 +2114,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     gap: 12px;
 }
-.help-content .help-title h1{
+.help-content .help-title h2{
     color: rgb(47, 53, 63);
     font-size: 30px;
     font-weight: 700;
@@ -2158,7 +2158,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     gap: 12px;
 }
-.video__sec-title h1{
+.video__sec-title h2{
     color: rgb(47, 53, 63);
     font-size: 30px;
     font-weight: 700;
@@ -2684,7 +2684,7 @@ input::-webkit-inner-spin-button {
     .offer .offer-content {
         gap: 130px;
     }
-    .offer-card .offer__card-title h1, 
+    .offer-card .offer__card-title h2, 
     .offer-card .offer__card-title span{
         font-size: 35px;
         line-height: 44px;
@@ -3007,7 +3007,7 @@ input::-webkit-inner-spin-button {
         font-size: 10px;
         line-height: 13px;
     }
-    .cars-content .cars-title h1{
+    .cars-content .cars-title h2{
         font-size: 22px;
         line-height: 23px;
     }
@@ -3270,7 +3270,7 @@ input::-webkit-inner-spin-button {
         font-size: 13px;
         line-height: 15px;
     }
-    .offer-card .offer__card-title h1, 
+    .offer-card .offer__card-title h2, 
     .offer-card .offer__card-title span{
         font-size: 20px;
         line-height: 26px;
@@ -3371,7 +3371,7 @@ input::-webkit-inner-spin-button {
     .install{
         padding: 24px 0px 25px;
     }
-    .install-content .install-title h1{
+    .install-content .install-title h2{
         font-size: 25px;
         line-height: 26px;
     }
@@ -3498,7 +3498,7 @@ input::-webkit-inner-spin-button {
     .certificate-content .certificate-title{
         gap: 6px;
     }
-    .certificate-content .certificate-title h1{
+    .certificate-content .certificate-title h2{
         font-size: 16px;
         line-height: 20px;
     }
@@ -3674,7 +3674,7 @@ input::-webkit-inner-spin-button {
         font-size: 58px;
         line-height: 59.27px;
     }
-    .result-content .result-text h2{
+    .result-content .result-text h3{
         font-size: 13px;
         line-height: 16px;
         margin-bottom: 8px;
@@ -3725,7 +3725,7 @@ input::-webkit-inner-spin-button {
         align-items: start;
         gap: 10px;
     }
-    .football-top .football-title h1{
+    .football-top .football-title h2{
         font-size: 19px;
         line-height: 27px;
     }
@@ -3774,8 +3774,8 @@ input::-webkit-inner-spin-button {
     .video__sec-top .video__sec-title img{
         width: 21px;
     }
-    .video__sec-title h1,
-    .help-content .help-title h1{
+    .video__sec-title h2,
+    .help-content .help-title h2{
         font-size: 19px;
         line-height: 27px;
     }
