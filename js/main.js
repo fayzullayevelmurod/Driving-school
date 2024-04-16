@@ -273,5 +273,4 @@ document.addEventListener('DOMContentLoaded', function () {
     phoneInputs.forEach(function (phoneInp) {
         applyMask(phoneInp);
     });
-
 });
