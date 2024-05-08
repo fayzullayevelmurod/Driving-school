@@ -15,6 +15,7 @@ closeMenu.addEventListener('click', () => {
 // Header select active
 const selectBtn = document.querySelector('.header__select-btn');
 const selectTabs = document.querySelectorAll('.header__select-tabs .header__select-tab');
+const selectTabsBg = document.querySelector('.header__select-tabs-bg');
 
 selectBtn.addEventListener('click', function () {
     this.classList.toggle('active')
@@ -30,6 +31,10 @@ selectTabs.forEach(tab => {
     });
 });
 
+selectTabsBg.addEventListener('click', function () {
+    selectBtn.classList.remove('active');
+    document.querySelector('.header__select-tabs').classList.remove('active');
+})
 
 // Header modal
 const headerItems = document.querySelectorAll('.header__modal-select');
@@ -80,9 +85,21 @@ installTabs.forEach(tab => {
 
 // Video
 let videoName = document.querySelectorAll('.review-video__name');
-document.querySelectorAll('.play-video').forEach(function(playButton, index) {
-    playButton.addEventListener('click', function() {
+let playVideos = document.querySelectorAll('.play-video');
+playVideos.forEach(function(playVideo, index) {
+    playVideo.addEventListener('click', function() {
         let video = this.parentElement.querySelector('.my-video');
+        let activePlayVideos = document.querySelectorAll('.play-video.active');
+        activePlayVideos.forEach(function(activePlayVideo) {
+            activePlayVideo.classList.remove('active');
+        });
+        let activeVideos = document.querySelectorAll('.my-video');
+        activeVideos.forEach(function(activeVideo) {
+            if (activeVideo !== video && !activeVideo.paused) {
+                activeVideo.pause();
+                activeVideo.removeAttribute('controls');
+            }
+        });
         if (video.paused) {
             video.play();
             video.setAttribute('controls', 'controls');
@@ -90,11 +107,10 @@ document.querySelectorAll('.play-video').forEach(function(playButton, index) {
             video.pause();
             video.removeAttribute('controls');
         }
-        this.style.display = 'none';
+        playVideo.classList.add('active');
         videoName[index].style.display = 'none';
     });
 });
-
 
 // Cars slider
 var carsSlider = new Swiper(".carsSlider", {

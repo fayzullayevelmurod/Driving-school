@@ -127,7 +127,7 @@ input::-webkit-inner-spin-button {
 .header-select .header__select-tabs{
     position: absolute;
     top: 63px;
-    z-index: 3;
+    z-index: 4;
     border-radius: 15px;
     backdrop-filter: blur(45.3px);
     background: #ffffffb3;
@@ -145,6 +145,14 @@ input::-webkit-inner-spin-button {
     top: 72px;
     opacity: 1;
     pointer-events: all;
+}
+.header-select .header__select-tabs.active+.header__select-tabs-bg{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .header-select .header__select-tab{
@@ -2204,6 +2212,8 @@ input::-webkit-inner-spin-button {
     position: absolute;
     top: 50%;
     left: 50%;
+    opacity: 1;
+    pointer-events: all;
     transform: translate(-50%, -50%);
     backdrop-filter: blur(6.3px);
     background: rgba(0, 0, 0, 0.5);
@@ -2212,6 +2222,10 @@ input::-webkit-inner-spin-button {
     border-radius: 100px;
     padding: 19px 21px 21px 26px;
     cursor: pointer;
+}
+.review-video .play-video.active{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .video__sec-slider .review-video video{
