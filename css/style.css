@@ -1183,6 +1183,61 @@ input::-webkit-inner-spin-button {
     width: 28px;
     height: 10px;
 }
+.offer-phone-wrap,
+.medical-phone-wrap{
+    position: relative;
+}
+.offer-phone-message{
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85%;
+    background: rgb(0, 0, 0);
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 15px;
+}
+.medical-phone-wrap .offer-phone-message{
+    top: 27px;
+    height: 70px;
+}
+.offer-phone-message img{
+    width: 30px;
+}
+.offer-phone-message .offer-phone-body{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.offer-phone-body .offer-phone-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.offer-phone-body .offer-phone-title b{
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #FFF;    
+}
+.offer-phone-body .offer-phone-title span{
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 10px;
+    color: rgba(255, 255, 255, 1);
+    opacity: .3;
+}
+.offer-phone-body .offer-phone-text{
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #FFF;
+}
+
 .offer__card-phone .offer__phone-tabs{
     display: flex;
     flex-direction: column;
@@ -3576,6 +3631,19 @@ input::-webkit-inner-spin-button {
         line-height: 14px;
     }
 
+    .medical-phone-wrap .offer-phone-message{
+        top: 15px;
+        height: 58px;
+    }
+    .medical-phone-wrap .offer-phone-body .offer-phone-title b,
+    .medical-phone-wrap .offer-phone-body .offer-phone-title span,
+    .medical-phone-wrap .offer-phone-body .offer-phone-text {
+        font-size: 7px;
+        font-weight: 400;
+        line-height: 8px;
+        color: #FFF;
+    }
+
     .exam-content .exam-info{
         gap: 8px;
     }
@@ -4052,5 +4120,26 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-width: 380px){
     .sign-content .sign-items{
         padding: 0px 15px 32px 15px;
+    }
+    .offer-phone-message{
+        padding: 7px;
+        top: 40px;
+        height: 66px;
+    }
+    .offer-phone-message img {
+        width: 25px;
+    }
+    .offer-phone-body .offer-phone-title b,
+    .offer-phone-body .offer-phone-text {
+        font-size: 6px;
+        line-height: 7px;
+    }
+}
+
+@media only screen and (max-width: 335px){
+    .offer-phone-message{
+        padding: 5px 7px;
+        top: 36px;
+        height: 55px;
     }
 }
