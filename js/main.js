@@ -16,6 +16,7 @@ closeMenu.addEventListener('click', () => {
 const selectBtn = document.querySelector('.header__select-btn');
 const selectTabs = document.querySelectorAll('.header__select-tabs .header__select-tab');
 const selectTabsBg = document.querySelector('.header__select-tabs-bg');
+const selectTabsClose = document.querySelector('.select-tab-close');
 
 selectBtn.addEventListener('click', function () {
     this.classList.toggle('active')
@@ -32,6 +33,10 @@ selectTabs.forEach(tab => {
 });
 
 selectTabsBg.addEventListener('click', function () {
+    selectBtn.classList.remove('active');
+    document.querySelector('.header__select-tabs').classList.remove('active');
+})
+selectTabsClose.addEventListener('click', function () {
     selectBtn.classList.remove('active');
     document.querySelector('.header__select-tabs').classList.remove('active');
 })
